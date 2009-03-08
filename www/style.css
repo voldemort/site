@@ -1,5 +1,5 @@
 html, body{
-	font-family:arial,helvetica,sans-serif;
+	font-family:Arial,sans-serif;
     margin: 0px;
 	padding: 0px;
 	background-color: #fff;
@@ -13,12 +13,13 @@ code, pre {
 h1, h2, h3, h4 {
   color: #8b0000;
 }
-
+a {
+	color: #8b0000;
+	text-decoration: none;
+}
 #header {
-	margin-top: 30px;
-	margin-left: 0px;
-	margin-bottom: 1px;
-	padding: 20px;
+	margin: 3em -2em 1em 0;
+	padding: 1.2em 0 1.2em 3em;
 	border-width: 0px;
 	background-color: #8b0000;
 	width: 80%;
@@ -34,6 +35,7 @@ h1, h2, h3, h4 {
 	font-size: 14pt;
 	font-style: italic;
 	margin: 2px;
+	line-height: 1.5;
 }
 .lsidebar {
 	float: left;
@@ -47,7 +49,6 @@ h1, h2, h3, h4 {
 .lsidebar li a {
 	text-decoration: none;
 	color: #8b0000;
-	font-weight: bold;
 }
 .content {
 	width: 700px;
