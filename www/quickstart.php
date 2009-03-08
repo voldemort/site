@@ -56,7 +56,7 @@
 
 <p>There are three methods for using the server:</p>
 
-<p>1. Start from the command line</p>
+<h4>1. Start from the command line</h4>
 
 You must first build the jar file using ant, as described above, then do the following:
 <pre>
@@ -86,7 +86,7 @@ $ ./bin/voldemort-server.sh /path/to/voldemort
 ...
 </pre>
 
-<p>2. Embedded Server</p>
+<h4>2. Embedded Server</h4>
 
 <p>You can instantiate the server directly in your code.</p>
 
@@ -96,7 +96,7 @@ VoldemortServer server = new VoldemortServer(config);
 server.start();
 </pre>
 
-<p>Deploy as a war</p>
+<h4>3. Deploy as a war</h4>
 <p>To do this build the war file using the <pre>ant war</pre> target and deploy via whatever mechanism your servlet container supports.</p>
 
 <?php require "includes/footer.inc" ?>

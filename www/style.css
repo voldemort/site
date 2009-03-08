@@ -1,0 +1,72 @@
+html, body{
+	font-family:arial,helvetica,sans-serif;
+    margin: 0px;
+	padding: 0px;
+	background-color: #fff;
+	color: #222;
+	line-height: 150%;
+	font-size: 11pt;
+}
+code, pre {
+	font: 1em/normal "courier new", courier, monospace;
+}
+h1, h2, h3, h4 {
+  color: darkred;
+}
+
+#header {
+	margin-top: 30px;
+	margin-left: 0px;
+	margin-bottom: 1px;
+	padding: 20px;
+	border-width: 0px;
+	background-color: darkred;
+	width: 80%;
+	min-width: 900px;
+}
+.title {
+	color: white;
+	font-size: 24pt;
+	margin: 2px;
+}
+.subtitle {
+	color: white;
+	font-size: 14pt;
+	font-style: italic;
+	margin: 2px;
+}
+.lsidebar {
+	float: left;
+	font-size: 12pt;
+	color: darkred;
+	width: 150px;
+}
+.lsidebar li {
+	list-style-type: none;
+}
+.lsidebar li a {
+	text-decoration: none;
+	color: darkred;
+	font-weight: bold;
+}
+.content {
+	width: 700px;
+	margin-left: 200px;
+	padding: 10px;
+	min-height: 800px;
+}
+.numeric {
+  text-align: right;
+}
+.data-table {
+  border: 1px solid darkgrey;
+  border-collapse: collapse;
+}
+.data-table td, .data-table th {
+  border: 1px solid #888;
+  padding: 2px;
+}
+.data-table th {
+  background-color: #ccc;
+  font-weight: bold;
+}
