@@ -2,7 +2,11 @@
 <html>
 	<head>
 		<title>Project Voldemort</title>
-		<link rel="stylesheet" href="style.css" type="text/css"/>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="icon" type="image/png" href="http://project-voldemort.com/images/vold-logo-small.png">
+		<meta name="keywords" content="Project Voldemort, Voldemort, key-value storage, distributed storage, Amazon Dynamo, persistence, scalability">
+		<meta name="description" content="The web site for Project Voldemort, a distributed key-value storage system.">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	</head>
 	<body>
 		<div>
@@ -46,6 +50,7 @@
 					<li>
 						<a href="http://code.google.com/p/project-voldemort/issues/list">bugs</a>
 					</li>
+				</ul>
 			</div>
 	
 			<div class="content">

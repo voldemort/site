@@ -11,7 +11,7 @@ code, pre {
 	font: 1em/normal "courier new", courier, monospace;
 }
 h1, h2, h3, h4 {
-  color: darkred;
+  color: #8b0000;
 }
 
 #header {
@@ -20,7 +20,7 @@ h1, h2, h3, h4 {
 	margin-bottom: 1px;
 	padding: 20px;
 	border-width: 0px;
-	background-color: darkred;
+	background-color: #8b0000;
 	width: 80%;
 	min-width: 900px;
 }
@@ -38,7 +38,7 @@ h1, h2, h3, h4 {
 .lsidebar {
 	float: left;
 	font-size: 12pt;
-	color: darkred;
+	color: #8b0000;
 	width: 150px;
 }
 .lsidebar li {
@@ -46,7 +46,7 @@ h1, h2, h3, h4 {
 }
 .lsidebar li a {
 	text-decoration: none;
-	color: darkred;
+	color: #8b0000;
 	font-weight: bold;
 }
 .content {
@@ -59,7 +59,7 @@ h1, h2, h3, h4 {
   text-align: right;
 }
 .data-table {
-  border: 1px solid darkgrey;
+  border: 1px solid #a9a9a9;
   border-collapse: collapse;
 }
 .data-table td, .data-table th {
