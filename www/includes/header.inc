@@ -42,7 +42,13 @@
 						<a href="quickstart.php">quickstart</a>
 					</li>
 					<li>
+						<a href="projects.php">fun projects</a>
+					</li>
+					<li>
 						<a href="performance.php">performance</a>
+					</li>
+					<li>
+					    <a href="http://test.project-voldemort.com:8080">unit tests</a>	
 					</li>
 					<li>
 						<a href="http://code.google.com/p/project-voldemort/source/browse/">source</a>
