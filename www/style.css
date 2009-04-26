@@ -71,3 +71,7 @@ a {
   background-color: #ccc;
   font-weight: bold;
 }
+.advert-message {
+  border: 3px solid #8b0000;
+  padding: 15px;
+}

@@ -3,11 +3,7 @@
 <h2>Fun Projects</h2>
 
 <p>
-This is a list of fun project ideas created for the Google Summer of Code application, but of course this is open source so the ideas are open to everyone. The useful skills section is meant as a guide, no one ever knows everything they need, so this could be taken as the skills you would gain by doing the project.
-</p>
-
-<p>
-If you think you might be interested in one of these projects, or if you want to discuss which might be a good fit for you, contact jay.kreps@{google email host name}.com.
+This is a list of fun project ideas that no one is currently working on.
 </p>
 
 <h3>1. Views</h3>
@@ -28,18 +24,6 @@ A simple implementation would allow the ability to statically create views by pr
 A more powerful implementation would provide a dynamic interface for creating and removing views via providing a simple transformation function in JVM-based language such as Scala or javascript.
 </p>
 
-<p>
-<b>Useful Skills</b>: Java, Scala (or other JVM-based scriptable language), Java reflection
-</p>
-
-<p>
-<b>Difficulty</b>: Medium
-</p>
-
-<p>
-<b>Project Contact</b>: Jay
-</p>
-
 <h3>2. Publish/Subscribe API</h3>
 
 <p>Storage systems have become much more specialized in recent years with each system providing expertise in certain areas--Hadoop and proprietary data warehouses provide batch processing capabilities, Search indexes provide support for complex ranked text queries, and a variety of distributed databases have sprung up. Voldemort is a specialized key-value system, but the same data stored in Voldemort may need to be indexed by search, churned over in hadoop, or otherwise processed by another system. Each of these systems needs the ability to subscribe to the changes happening in Voldemort and get a stream of such changes that they can process in their own specialized way.	
@@ -50,14 +34,6 @@ A more powerful implementation would provide a dynamic interface for creating an
 <p>Amazon has implemented this functionality as a "Merkle tree" data structure in their Dynamo system which allows nodes to compare their contents quickly and catch up to differences they have missed, but this is not the only approach. It could be a simple secondary index that implements a node-specific logical counter that tracks modification number for each key.</p>
 
 <p>The api that would be provided would be something like getAllChangesSince(int changeNumber), and this api would provide the latest change for each key.
-
-<p><b>Useful Skills</b>: Java, Distributed Systems</p>
-
-<p><b>Difficulty</b>: Hard</p>
-
-<p>
-<b>Project Mentor</b>: Anmol
-</p>
 
 <h3>3. New Clients</h3>
 
@@ -71,18 +47,6 @@ A minimal implementation must allow the client to provide the ability to deal wi
 
 <p>
 The network protocol is pluggable so a slightly more difficult implementation could add both a network protocol and a client (say in a language not well supported by protocol buffers).
-</p>
-
-<p>
-<b>Useful Skills</b>: Interface design, protocol buffers, first-rate knowledge of a non-java programming language, at least passing familiarity with Java
-</p>
-
-<p>
-<b>Difficulty</b>: Low to medium
-</p>
-
-<p>
-<b>Project Contact</b>: Bhupesh
 </p>
 
 <h3>4. Geographical Data Distribution</h3>
@@ -99,34 +63,10 @@ This project would involve adding a location key to the metadata stored about ea
 A full implementation would come with tests that add artificial timeouts and test correct routing decisions. An excellent implementation would also come with an Amazon EC2 test that ran in multiple EC2 availability regions (i.e. in actual geographically distributed data centers).
 </p>
 
-<p>
-<b>Useful Skills</b>: Java, distributed systems
-</p>
-
-<p>
-<b>Difficulty</b>: Medium
-</p>
-
-<p>
-<b>Project Contact</b>: Bhupesh
-</p>
-
 <h3>5. NIO based server</h3>
 
 <p>
 The socket server uses a single-thread per connection. This approach is very efficient, but becomes less efficient for scaling beyond hundreds of connections. An NIO socket server could be plugged in for better support for very large clusters. The deliverable would be a NIO-based connector that could be plugged in in place of the existing approach when appropriate.
-</p>
-
-<p>
-<b>Useful Skills</b>: Java, network programming
-</p>
-
-<p>
-<b>Difficulty</b>: Medium
-</p>
-
-<p>
-<b>Project Contact</b>: Jay
 </p>
 
 <h3>6. Operational Interface</h3>
@@ -139,18 +79,6 @@ One of the primary problems for a practical distributed system is knowing the st
 Part of this project would be providing remote access to the administrative functionality that the GUI can invoke. Some of the basic administrative functionality could be shared with the Scala shell project.
 </p>
 
-<p>
-<b>Useful Skills</b>: Java, HTML, CSS, web programming
-</p>
-
-<p>
-<b>Difficulty</b>: Low to medium depending on the level of functionality targeted.
-</p>
-
-<p>
-<b>Project Contact</b>: Jay
-</p>
-
 <h3>7. Scala Voldemort Shell</h3>
 
 <p>
@@ -159,18 +87,6 @@ Voldemort comes with a very simple text shell. A better way to build such a thin
 
 <p>
 Part of this project would be providing the administrative commands that the shell could invoke. Some of the basic administrative functionality could be shared with the Operational Interface project.
-</p>
-
-<p>
-<b>Useful Skills</b>: Scala, Java, Interface Design
-</p>
-
-<p>
-<b>Difficulty</b>: Low
-</p>
-
-<p>
-<b>Project Contact</b>: Jay
 </p>
 
 <h3>8. Export Data to Hadoop</h3>
@@ -183,12 +99,6 @@ Depending on the implementation strategy this could be integrated with the subsc
 </p>
 <p>
 Since Voldemort is an online system it is important that the streaming data transfer does not impact the performance of the system too severely (it may need some throttling).
-</p>
-<p>
-<b>Useful Skills</b>: Hadoop, Java
-</p>
-<p>
-<b>Project Contact</b>: Bhupesh
 </p>
 
 <?php require "includes/footer.inc" ?>

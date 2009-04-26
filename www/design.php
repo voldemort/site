@@ -86,7 +86,7 @@ The downside to the above approach occurs when a server is added, or removed fro
 </p>
 
 <p>
-<a href="http://en.wikipedia.org/wiki/Two-phase_commit_protocol">Consistent hashing</a> is a technique that avoids these problems, and we use it to compute the location of each key on the cluster.  Using this technique voldemort has the property that when a server fails load will distribute equally over all remaining servers in the cluster. Likewise when a new server is added to a cluster of <i>S</i> servers, only 1/(<i>S</i>+1) values must be moved to the new machine.
+<a href="http://en.wikipedia.org/wiki/Consistent_hashing">Consistent hashing</a> is a technique that avoids these problems, and we use it to compute the location of each key on the cluster.  Using this technique voldemort has the property that when a server fails load will distribute equally over all remaining servers in the cluster. Likewise when a new server is added to a cluster of <i>S</i> servers, only 1/(<i>S</i>+1) values must be moved to the new machine.
 </p>
 
 <p>
