@@ -35,7 +35,7 @@
 	<td>The BDB cache that is shared by all BDB tables. Bigger is better.</td>
 </tr>
 <tr>
-	<td>bdb.sync.transactions</td>
+	<td>bdb.flush.transactions</td>
 	<td>false</td>
 	<td>Should transactions be immediately written to disk?</td>
 </tr>

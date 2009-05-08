@@ -42,7 +42,10 @@
 						<a href="quickstart.php">quickstart</a>
 					</li>
 					<li>
-						<a href="projects.php">fun projects</a>
+						<a href="developer.php">code&nbsp;overview</a>
+					</li>
+					<li>
+						<a href="projects.php">fun&nbsp;projects</a>
 					</li>
 					<li>
 						<a href="performance.php">performance</a>

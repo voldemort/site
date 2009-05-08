@@ -1,9 +1,6 @@
 <?php require "includes/header.inc" ?>
 
-<div class="advert-message">
-	Interested in this project? LinkedIn is looking for outstanding engineers to work on Project Voldemort, Hadoop, and other pieces of our data infrastructure. 
-	See the job description <a href="http://www.linkedin.com/jobs?viewJob=&jobId=674770">here</a> for more info.
-</div>
+<?php include "includes/advert.inc" ?>
 
 <h3>Voldemort is a distributed key-value storage system</h3>
 <ul>

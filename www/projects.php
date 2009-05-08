@@ -1,5 +1,7 @@
 <?php require "includes/header.inc" ?>
 
+<?php include "includes/advert.inc" ?>
+
 <h2>Fun Projects</h2>
 
 <p>
