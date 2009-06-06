@@ -65,13 +65,7 @@ This project would involve adding a location key to the metadata stored about ea
 A full implementation would come with tests that add artificial timeouts and test correct routing decisions. An excellent implementation would also come with an Amazon EC2 test that ran in multiple EC2 availability regions (i.e. in actual geographically distributed data centers).
 </p>
 
-<h3>5. NIO based server</h3>
-
-<p>
-The socket server uses a single-thread per connection. This approach is very efficient, but becomes less efficient for scaling beyond hundreds of connections. An NIO socket server could be plugged in for better support for very large clusters. The deliverable would be a NIO-based connector that could be plugged in in place of the existing approach when appropriate.
-</p>
-
-<h3>6. Operational Interface</h3>
+<h3>5. Operational Interface</h3>
 
 <p>
 One of the primary problems for a practical distributed system is knowing the state of the system. Voldemort has a rudimentary GUI that provides basic information. This project would be to make a first rate management GUI and corresponding control functionality to be able to know the performance and availability of each node in the system as well as perform basic operations such as starting and stopping nodes (or the whole cluster), performing queries, etc.
@@ -81,7 +75,7 @@ One of the primary problems for a practical distributed system is knowing the st
 Part of this project would be providing remote access to the administrative functionality that the GUI can invoke. Some of the basic administrative functionality could be shared with the Scala shell project.
 </p>
 
-<h3>7. Scala Voldemort Shell</h3>
+<h3>6. Scala Voldemort Shell</h3>
 
 <p>
 Voldemort comes with a very simple text shell. A better way to build such a thing is to fully integrate a language with an interpreter and provide a set of predefined administrative commands as functions in the shell. Scala has a flexible syntax and integrates easily with Java so it would be a good choice for such a shell.
@@ -91,7 +85,7 @@ Voldemort comes with a very simple text shell. A better way to build such a thin
 Part of this project would be providing the administrative commands that the shell could invoke. Some of the basic administrative functionality could be shared with the Operational Interface project.
 </p>
 
-<h3>8. Export Data to Hadoop</h3>
+<h3>7. Export Data to Hadoop</h3>
 
 <p>
 Voldemort is an online system for performing simple, low-latency queries at high volume. But a common need is to do data analytics across all the data in the system. This is something best done in a first-rate batch processing system like Hadoop. This project would be to build a MapReduce job that streams data into Hadoop (say by mapping over data partitions and having each mapper stream in the data from the given partition). Data reconciliation of data versions would need to be done so that the Hadoop cluster ends up with only the reconciled version of each key. A first rate implementation might give a second job for aiding data processing in the appropriate serialization format used by the Voldemort store.

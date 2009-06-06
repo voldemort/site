@@ -2,18 +2,10 @@
 
 <h1>Quickstart</h1>
 
-<h4>Step 1: Checkout code:</h4>
-<pre>
-  	> svn checkout http://project-voldemort.googlecode.com/svn/trunk/ project-voldemort
-</pre>
+<h4>Step 1: Download the code</h4> 
+Download either <a href="http://github.com/voldemort/voldemort/downloads">a recent stable release</a></h4> or, for those who like to live more dangerously, the up-to-the-minute build from <a href="http://test.project-voldemort.com:8080/job/voldemort-master/lastBuild">the build server</a>.
 
-<h4>Step 2: Build</h4>
-<pre>
-	> cd project-voldemort
-	> ant
-</pre>
-
-<h4>Step 3: Start single node cluster</h4>
+<h4>Step 2: Start single node cluster</h4>
 <pre>
 	> bin/voldemort-server.sh config/single_node_cluster > /tmp/voldemort.log &
 </pre>

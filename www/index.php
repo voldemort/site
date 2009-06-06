@@ -11,7 +11,7 @@
       with common serialization frameworks like Protocol Buffers, Thrift, and Java Serialization</li>
   <li>Data items are versioned to maximize data integrity in failure scenarios without compromising availability of the system</li>
   <li>Each node is independent of other nodes with no central point of failure or coordination</li>
-  <li>Good single node performance: you can expect 10-20k operations per second depending on the machines, the network, and the replication factor</li>
+  <li>Good single node performance: you can expect 10-20k operations per second depending on the machines, the network, the disk system, and the data replication factor</li>
   <li>Support for pluggable data placement strategies to support things like distribution across data centers that are geographical far apart.</li>
 </ul>
 <p>
@@ -32,11 +32,11 @@ arbitrary in-database joins are already impossible since all the data is not ava
 a caching layer which will require hashtable semantics anyway.  For these applications Voldemort offers a number of advantages:
 </p>
 <ul>
-  <li>Voldemort combines in memory caching with the storage system so that a separete caching tier is not required (instead the storage system itself
+  <li>Voldemort combines in memory caching with the storage system so that a separate caching tier is not required (instead the storage system itself
       is just fast.</li>
   <li>Unlike MySQL replication, both reads and writes scale horizontally</li>
-  <li>Data partioning is transparent, and allows for cluster expansion without rebalancing all data</li>
-  <li>Data replication and placement is decided by a simple API to be able to accomadate a wide range of application specific strategies</li>
+  <li>Data portioning is transparent, and allows for cluster expansion without rebalancing all data</li>
+  <li>Data replication and placement is decided by a simple API to be able to accommodate a wide range of application specific strategies</li>
   <li>The storage layer is completely mockable so development and unit testing can be done against a throw-away in-memory storage system
       without needing a real cluster (or even a real storage system) for simple testing
   </li>
@@ -45,5 +45,11 @@ a caching layer which will require hashtable semantics anyway.  For these applic
 <p>
 The source code is available under the Apache 2.0 license. We are actively looking for contributors so if you have ideas, code, bug reports, or fixes
 you would like to contribute please do so. 
+</p>
+
+<p>
+For help please see the <a href="http://groups.google.com/group/project-voldemort">discussion group</a>, or the IRC channel chat.us.freenode.net #voldemort.	
+</p>
+
 
 <?php require "includes/footer.inc" ?>

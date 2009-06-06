@@ -5,7 +5,7 @@
 <h3>Getting Started With The Source Code</h3>
 
 <p>
-For programmers interested in getting to know the source code, here are a few pointers to get started. Start by reading the Amazon Dynamo paper, it is a bit dense in places but will give an idea of why certain things are done a given way.
+For programmers interested in getting to know the source code, here are a few pointers to get started. One good starting place is the Amazon Dynamo paper, it is a bit dense in places but will give an idea of why certain things are done a given way.
 </p>
 
 <p>
@@ -39,6 +39,27 @@ That is all there is, it isn't a terribly large project so hopefully it isn't to
 
 <h3>Contributions</h3>
 
-Code contributions are welcome. The best approach is to create a bug with a patch attached and specify the revision against which it applies. The project comes with eclipse settings that will enforce some basic stylistic guidelines. Non-trivial code should have unit tests to keep it working.
+Code contributions are very welcome. There is a <a href="projects.php">project idea page</a> that has interesting (but sometimes non-trivial) projects if you want to see some ideas. Feel free to email the <a href="http://groups.google.com/group/project-voldemort">mailing list</a> if you want to discuss and idea you are considering or have questions about how to proceed. There is also an IRC channel at chat.us.freenode.net #voldemort.	
+</p>
+<p>
+The best approach for actually submitting a contribution is to fork the project in git and make your changes available on github (or another public git repository). If you aren't familiar with git you can just download a tarball of the source code from the build server, create a patch against that, and email it to the mailing list. The project comes with eclipse settings that will enforce some basic stylistic guidelines, but if you don't use eclipse you can just copy the style you see elsewhere in the code base. Non-trivial code should have unit tests to keep it working.
+</p>
+<p>
+Here is how to submit a change using git
+<ul>
+  <li>Create a github account, if you don't already have one.</li>
+  <li>Go to the <a href="http://github.com/voldemort/voldemort/master">master voldemort</a> repository and click the fork button to create a copy in your own repo.</li>
+  <li>Checkout the code: 
+	<div class="code">git clone git://github.com/your_user_name/voldemort.git</div>
+  </li>
+  <li>Do some programming</li>
+  <li>Commit your changes: 
+	<div class="code">git commit -a</div>
+  </li>
+  <li>Push your changes back to github: 
+    <div class="code">git push git://github.com/your_user_name/voldemort.git</div>
+  </li>
+  <li><a href="http://groups.google.com/group/project-voldemort">Tell us</a> what you have done so it can be integrated.</li>
+</ul>
 
 <?php require "includes/footer.inc" ?>

@@ -21,13 +21,16 @@
 			<div class="lsidebar">
 				<ul>
 					<li>
+						<a href="http://groups.google.com/group/project-voldemort">blog</a>
+					</li>
+					<li>
 						<a href="design.php">design</a>
 					</li>
 					<li>
-						<a href="http://groups.google.com/group/project-voldemort">discussion</a>
+						<a href="http://groups.google.com/group/project-voldemort">mailing list</a>
 					</li>
 					<li>
-						<a href="http://code.google.com/p/project-voldemort/downloads/list">download</a>
+						<a href="http://github.com/voldemort/voldemort/downloads">download</a>
 					</li>
 					<li>
 						<a href="configuration.php">configuration</a>
@@ -54,10 +57,10 @@
 					    <a href="http://test.project-voldemort.com:8080">unit tests</a>	
 					</li>
 					<li>
-						<a href="http://code.google.com/p/project-voldemort/source/browse/">source</a>
+						<a href="http://github.com/voldemort/voldemort/tree/master">source</a>
 					</li>
 					<li>
-						<a href="http://code.google.com/p/project-voldemort/issues/list">bugs</a>
+						<a href="http://github.com/voldemort/voldemort/issues">bugs</a>
 					</li>
 				</ul>
 			</div>
