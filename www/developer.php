@@ -48,16 +48,16 @@ The best approach for actually submitting a contribution is to fork the project 
 Here is how to submit a change using git
 <ul>
   <li>Create a github account, if you don't already have one.</li>
-  <li>Go to the <a href="http://github.com/voldemort/voldemort/master">master voldemort</a> repository and click the fork button to create a copy in your own repo.</li>
+  <li>Go to the <a href="http://github.com/voldemort/voldemort/tree/master">master voldemort</a> repository and click the fork button to create a copy in your own repo.</li>
   <li>Checkout the code: 
-	<div class="code">git clone git://github.com/your_user_name/voldemort.git</div>
+	<pre>git clone git://github.com/your_user_name/voldemort.git</pre>
   </li>
   <li>Do some programming</li>
   <li>Commit your changes: 
-	<div class="code">git commit -a</div>
+	<pre">git commit -a</pre>
   </li>
   <li>Push your changes back to github: 
-    <div class="code">git push git://github.com/your_user_name/voldemort.git</div>
+    <pre>git push git://github.com/your_user_name/voldemort.git</pre>
   </li>
   <li><a href="http://groups.google.com/group/project-voldemort">Tell us</a> what you have done so it can be integrated.</li>
 </ul>
