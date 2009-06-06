@@ -21,7 +21,7 @@
 			<div class="lsidebar">
 				<ul>
 					<li>
-						<a href="http://groups.google.com/group/project-voldemort">blog</a>
+						<a href="blog">blog</a>
 					</li>
 					<li>
 						<a href="design.php">design</a>
