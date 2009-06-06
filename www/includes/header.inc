@@ -30,7 +30,10 @@
 						<a href="http://groups.google.com/group/project-voldemort">mailing list</a>
 					</li>
 					<li>
-						<a href="http://github.com/voldemort/voldemort/downloads">download</a>
+						<a href="http://github.com/voldemort/voldemort/downloads">releases</a>
+					</li>
+					<li>
+						<a href="http://test.project-voldemort.com:8080/job/voldemort-master">snapshot build</a>
 					</li>
 					<li>
 						<a href="configuration.php">configuration</a>
