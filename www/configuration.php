@@ -66,12 +66,12 @@ Note that the configuration is currently simple files so it is important that th
 	        &lt;persistence&gt;bdb&lt;/persistence&gt;
 	        &lt;routing&gt;client&lt;/routing&gt;
 	        &lt;key-serializer&gt;
-	            &lt;type&gt;json&lt;/type&gt;
-	            &lt;schema-info&gt;"int32"&lt;/schema-info&gt;
+	            &lt;type&gt;string&lt;/type&gt;
+	            &lt;schema-info&gt;utf8&lt;/schema-info&gt;
 	        &lt;/key-serializer&gt;
 	        &lt;value-serializer&gt;
 	            &lt;type&gt;json&lt;/type&gt;
-	            &lt;schema-info version="1"&gt;"string"&lt;/schema-info&gt;
+	            &lt;schema-info version="1"&gt;[{"id":"int32", "name":"string"}]&lt;/schema-info&gt;
 	        &lt;/value-serializer&gt;
 	    &lt;/store&gt;
 	&lt;/stores&gt;
@@ -85,10 +85,40 @@ Each of these parameters deserves a quick discussion:
 	<li><i>required-reads</i>&mdash;The least number of reads that can succeed without throwing an exception. Consider a case where the replication factor is 5, preferred reads is 4, and required reads is 2. If 3 of the 5 nodes are operational then the client may try all the nodes to try to reach the preferred 4 reads, but since only 3 are responsive it will allow the read to complete. Had only 1 been responsive it would have thrown an exception, since that was lower than the consistency guarantee requested for this table (and that could mean returning stale data).</li>
 	<li><i>preferred-writes</i>(optional)&mdash;The number of successful writes the client attempts to block for before returning success. Defaults to required-writes</li>
 	<li><i>required-writes</i>&mdash; The least number of writes that can succeed without the client getting back an exception.</li>
-	<li><i>persistence</i>&mdash; The persistence backend used by the store. Currently this could be one of BDB, MYSQL, MEMORY, READONLY, and CACHE. The difference between cache and memory is that MEMORY will throw and OutOfMemory exception if it grows larger than the JVM heap whereas CACHE will discard data.</li>
+	<li><i>persistence</i>&mdash; The persistence backend used by the store. Currently this could be one of <i>bdb</i>, <i>mysql</i>, <i>memory</i>, <i>readonly</i>, and <i>cache</i>. The difference between <i>cache</i> and <i>memory</i> is that <i>memory</i> will throw and OutOfMemory exception if it grows larger than the JVM heap whereas <i>cache</i> will discard data.</li>
 	<li><i>routing</i>&mdash; Determines the routing policy. Currently only client-side routing is fully supported. Server side routing will be coming soon, as will a few more interesting policies.</li>
-	<li><i>key-serializer</i>&mdash; The serialization type used for reading and writing <i>keys</i>. The type can be json, java-serialization, string, or identity (meaning raw bytes). The schema-info gives information to the serializer about how to perform the mapping (e.g. the JSON schema described in <a href="design.php">here</a>).</li>
-	<li><i>value-serializer</i>&mdash; The serialization type used for reading and writing <i>keys</i>. The subelements are same as for the key-serializer, except that the the value serializer can have multiple schema-infos with different versions. The highest version is the one used for writing data, but data is always read with the version it was written with. This allows for gradual schema evolution.</li>
+	<li><i>key-serializer</i>&mdash; The serialization type used for reading and writing <i>keys</i>. The type can be <i>json</i>, <i>java-serialization</i>, <i>string</i>, <i>protobuff</i>, <i>thrift</i>, or <i>identity</i> (meaning raw bytes). The schema-info gives information to the serializer about how to perform the mapping (e.g. the JSON schema described in <a href="design.php">here</a>).
+	</li>
+	<li><i>value-serializer</i>&mdash; The serialization type used for reading and writing <i>values</i>. The supported types are the same as for keys. The subelements are same as for the key-serializer, except that the the value serializer can have multiple schema-infos with different versions. The highest version is the one used for writing data, but data is always read with the version it was written with. This allows for gradual schema evolution. Versioning is only supported by the JSON serializer as other serialization formats have their own versioning systems.
+		Here are some example serializers:
+			<pre>
+    &lt;!-- A serializer that serializes plain strings in UTF8 encoding --&gt;
+    &lt;value-serializer&gt;
+        &lt;type&gt;string&lt;/type&gt;
+        &lt;schema-info&gt;utf8&lt;/schema-info&gt;
+    &lt;/value-serializer&gt;
+
+    &lt;!-- A serializer that serializes binary-format JSON data with the given schema. 
+            Each value is a List&lt;Map&lt;String, ?&gt;&gt; where the keys "id" and "name" and the values 
+            are a 32-bit integer id and a string name. --&gt;
+    &lt;value-serializer&gt;
+        &lt;type&gt;json&lt;/type&gt;
+        &lt;schema-info&gt;[{"id":"int32", "name":"string"}]&lt;/schema-info&gt;
+    &lt;/value-serializer&gt;
+		
+    &lt;!-- A serializer that serializes protocol buffer objects of the given class. --&gt;
+    &lt;value-serializer&gt;
+        &lt;type&gt;protobuff&lt;/type&gt;
+        &lt;schema-info&gt;java=com.something.YourProtoBuffClassName&lt;/schema-info&gt;
+    &lt;/value-serializer&gt;
+		
+    &lt;!-- A serializer that serializes protocol buffer objects of the given class. --&gt;
+    &lt;value-serializer&gt;
+        &lt;type&gt;thrift&lt;/type&gt;
+        &lt;schema-info&gt;java=com.something.YourProtoThriftClassName&lt;/schema-info&gt;
+    &lt;/value-serializer&gt;
+			</pre>
+		</li>
 </ul>
 </p>
 
