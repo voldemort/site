@@ -35,9 +35,14 @@
 	<td>The BDB cache that is shared by all BDB tables. Bigger is better.</td>
 </tr>
 <tr>
-	<td>bdb.flush.transactions</td>
+	<td>bdb.write.transactions</td>
 	<td>false</td>
 	<td>Should transactions be immediately written to disk?</td>
+</tr>
+<tr>
+	<td>bdb.flush.transactions</td>
+	<td>false</td>
+	<td>When the transaction has been written to disk should we force the disk to flush the OS cache. This is a fairly expensive operation.</td>
 </tr>
 <tr>
 	<td>bdb.data.directory</td>
