@@ -15,8 +15,7 @@
   <li>Support for pluggable data placement strategies to support things like distribution across data centers that are geographical far apart.</li>
 </ul>
 <p>
-It is used at <a href="http://www.linkedin.com">LinkedIn</a> for certain high-scalability storage problems where simple functional partitioning is not sufficient. It is still a new 
-system which has rough edges, bad error messages, and probably plenty of uncaught bugs. Let us know if you find one of these, so we can fix it.
+It is used at <a href="http://www.linkedin.com">LinkedIn</a> and <a href="https://github.com/voldemort/voldemort/wiki/Powered-By">others</a> for certain high-scalability storage problems where simple functional partitioning is not sufficient. Even though it was released as open-source in early 2009, it still has some rough edges, bad error messages, and uncaught bugs. Let us know if you find one of these, so we can fix it.
 </p>
 <h3>Comparison to relational databases</h3>
 <p>
