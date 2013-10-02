@@ -3,7 +3,7 @@
 <h1>Quickstart</h1>
 
 <h4>Step 1: Download the code</h4> 
-Download either <a href="http://github.com/voldemort/voldemort/downloads">a recent stable release</a></h4> or, for those who like to live more dangerously, the up-to-the-minute build from <a href="http://test.project-voldemort.com:8080/job/voldemort-master/lastBuild">the build server</a>.
+Download either <a href="http://code.google.com/p/project-voldemort/downloads/list">a recent stable release</a></h4> or, for those who like to live more dangerously, the up-to-the-minute build from <a href="http://test.project-voldemort.com:8080/job/voldemort-master/lastBuild">the build server</a>.
 
 <h4>Step 2: Start single node cluster</h4>
 <pre>
