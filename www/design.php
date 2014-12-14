@@ -82,7 +82,7 @@ This system has the nice property that anyone can calculate the location of a va
 </p>
 
 <p>
-The downside to the above approach occurs when a server is added, or removed from the cluster (say because we have purchased new hardware or a server is temporarily down). In this case <i>d</i> may change and all data will shift between servers. Event if <i>d</i> does not change load will not evenly distribute from a single removed/failed server to the rest of the cluster.
+The downside to the above approach occurs when a server is added, or removed from the cluster (say because we have purchased new hardware or a server is temporarily down). In this case <i>d</i> may change and all data will shift between servers. Even if <i>d</i> does not change load will not evenly distribute from a single removed/failed server to the rest of the cluster.
 </p>
 
 <p>
